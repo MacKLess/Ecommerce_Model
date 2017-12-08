@@ -48,7 +48,11 @@ To install on your own machine, follow the instructions below:
     * Added items will display updated item count and cost in navbar using AJAX.
   * Users can delete items from shopping cart using AJAX.
     * The total price will be updated upon removal of each item.
-
+  * Users will not be able to order negative quantities of products.
+  * Users can sign in or sign up for an account (with flash notification of success)
+  * Admin
+    * CRUD functionality for products with flash confirmation.
+    * Navbar links for accounts and adding products available upon admin signin.
 
 <!-- ## Known Bugs:
 

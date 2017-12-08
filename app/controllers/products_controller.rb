@@ -1,10 +1,15 @@
 class ProductsController < ApplicationController
-  before_filter :authorize, except: [:index, :show]
+  before_action :authorize, except: [:index, :show]
 
   def index
     @products = Product.all
     @order_item = current_order.order_items.new
   end
+
+  # def show
+  #   @product = Product.find(params[:id])
+  #   @order_item = OrderItem.new
+  #
 
   def new
     @product = Product.new
