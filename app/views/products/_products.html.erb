@@ -1,0 +1,11 @@
+<% if @products.any? %>
+  <div class="row">
+    <div class="section">
+    <% @products.each do |product| %>
+      <%= render 'product', product: product %>
+    <% end %>
+    </div>
+  </div>
+<% else %>
+  <h3>There are no saved oddbits.</h3>
+<% end %>

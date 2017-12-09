@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Week3CodeReview</title>
+    <title>ECommerce Model</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,17 +9,24 @@
   </head>
   <nav>
     <div class="nav-wrapper">
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><%= link_to "Cart | Total items: #{ cart_items }", cart_path %></li>
-        <li><%= link_to "See all products", products_path %></li>
-        <% if current_user %>
-          <li><%= current_user.email %></li>
-          <li><%= link_to "Sign out", '/sign_out' %></li>
-        <% else %>
-          <li><%= link_to "Sign up", 'sign_up' %></li>
-          <li><%= link_to "Sign in", '/sign_in' %></li>
-        <% end %>
-      </ul>
+      <div class="navbar-header">
+        <ul class="nav navbar-nav navbar-left" >
+          <li><%= link_to "See all products", products_path %></li>
+          <% if current_user && current_user.admin? %>
+          <li><%= link_to "Add Product", product_path %></li>
+          <% end %>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Cart | Total items: #{ cart_items }", cart_path %></li>
+          <% if current_user %>
+            <li><%= current_user.email %></li>
+            <li><%= link_to "Sign out", '/sign_out' %></li>
+          <% else %>
+            <li><%= link_to "Sign up", 'sign_up' %></li>
+            <li><%= link_to "Sign in", '/sign_in' %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </nav>
 
