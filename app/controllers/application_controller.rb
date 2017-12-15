@@ -19,7 +19,4 @@ class ApplicationController < ActionController::Base
     session[:order_id] ? Order.find(session[:order_id]) : Order.new
   end
 
-  def authorize
-    redirect_to '/sign_in' unless admin
-  end
 end

@@ -1,4 +1,4 @@
-class Order < ApplicationRecord
+class Order < ActiveRecord::Base
   has_many :order_items
   belongs_to :user, optional: true
 
