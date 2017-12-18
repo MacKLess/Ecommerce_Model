@@ -49,7 +49,7 @@ To install on your own machine, follow the instructions below:
 * Need 6 of the following:
   * X Ensure that users can't order negative number of items.
   * X Add flash messages for signing up, signing in, and signing out.
-  * Add product update and delete functionality for admins.
+  * X Add product update and delete functionality for admins.
   * X Add admin flash messages for adding, updating, and deleting products.
   * X Add admin links to navebar so admins can easily add, update, and delete products.
   * Add integration testing for AJAX functionality.
