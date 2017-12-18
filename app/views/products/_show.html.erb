@@ -1,5 +1,13 @@
 <div id="product-details-<%= @product.id %>" class="product-details-panel">
 
-<%= render 'product', product: @product  %>  
+<%= render 'product', product: @product  %>
 
+<% if current_user && current_user.admin? %>
+<hr>
+<%= link_to "Edit", edit_product_path(@product), id: "product-edit", remote: true %> |
+<%= link_to "Delete", product_path(@product), remote: true, data: {
+        confirm: "This will remove the product from the site. Are you sure you want to do this?",
+        method: "delete"
+        } %>
+<% end %>
 </div>

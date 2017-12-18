@@ -13,15 +13,6 @@ _This is a mock website for an unspecified e-commerce store. It has basic user a
 To install on your own machine, follow the instructions below:
 
 * Clone this repository.
-<!-- * Create a ```.env``` file and format as follows:
-  ```
-  PUBLISHABLE_KEY='[Your Stripe Publishable Key]'
-  SECRET_KEY='[Your Stripe Secret Key]'
-
-  CURRENCYLAYERKEY='[Your Currency Layer Key]'
-  AVATAX_KEY='[Your Avatax API Key]'
-  ```  
-  * You will need to acquire API keys for [Stripe](https://stripe.com/docs), [AvaTax](https://developer.avalara.com/avatax/dev-guide/) and [Currency Layer](https://currencylayer.com/). -->
 * Run the following commands in the project root directory:
   ```
   bundle update
@@ -59,9 +50,8 @@ To install on your own machine, follow the instructions below:
   * X Ensure that users can't order negative number of items.
   * X Add flash messages for signing up, signing in, and signing out.
   * Add product update and delete functionality for admins.
-  * Add admin flash messages for adding, updating, and deleting products.
-  * Add Stripe so users can pay when finalizing orders.
-  * Add admin links to navebar so admins can easilty add, update, and delete products.
+  * X Add admin flash messages for adding, updating, and deleting products.
+  * X Add admin links to navebar so admins can easily add, update, and delete products.
   * Add integration testing for AJAX functionality.
 
 

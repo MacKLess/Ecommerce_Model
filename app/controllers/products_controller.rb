@@ -30,6 +30,27 @@ class ProductsController < ApplicationController
     end
   end
 
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product = Product.find(params[:id])
+    @order_item = OrderItem.new
+    if @product.update(product_params)
+      respond_to do |format|
+        format.html {
+          flash[:notice] = "Product updated successfully."
+          redirect_to product_path(@product)
+        }
+        format.js
+      end
+    else
+      flash[:alert] = @product.errors.full_messages
+      render :edit
+    end
+  end
+
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
