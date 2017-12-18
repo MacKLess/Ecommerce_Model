@@ -55,6 +55,16 @@ To install on your own machine, follow the instructions below:
     * Navbar links for accounts and adding products available upon admin signin.
 
 
+* Need 6 of the following:
+  * X Ensure that users can't order negative number of items.
+  * X Add flash messages for signing up, signing in, and signing out.
+  * Add product update and delete functionality for admins.
+  * Add admin flash messages for adding, updating, and deleting products.
+  * Add Stripe so users can pay when finalizing orders.
+  * Add admin links to navebar so admins can easilty add, update, and delete products.
+  * Add integration testing for AJAX functionality.
+
+
 ## Support and contact details
 
 _Please contact: [ldmackrell@gmail.com](mailto:ldmackrell@gmail.com) with questions, comments, or issues._

@@ -9,11 +9,11 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    @order_item =OrderItem.new
-    # respond_to do |format|
-    #   format.html
-    #   format.js
-    # end
+    @order_item = OrderItem.new
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def new
@@ -27,6 +27,18 @@ class ProductsController < ApplicationController
       redirect_to '/'
     else
       render :new
+    end
+  end
+
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    respond_to do |format|
+      format.html {
+        flash[:notice] = "Product has been destroyed."
+        redirect_to products_path
+      }
+      format.js
     end
   end
 
